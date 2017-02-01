@@ -31,6 +31,9 @@ public class ContainerSuma extends javax.swing.JFrame {
         valorDos = new javax.swing.JTextField();
         resultado = new javax.swing.JTextField();
         sumarBtn = new javax.swing.JButton();
+        restarBtn = new javax.swing.JButton();
+        multiplicarBtn = new javax.swing.JButton();
+        dividirBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,19 +44,42 @@ public class ContainerSuma extends javax.swing.JFrame {
             }
         });
 
+        restarBtn.setText("Restar");
+        restarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                restarBtnActionPerformed(evt);
+            }
+        });
+
+        multiplicarBtn.setText("Multiplicar");
+        multiplicarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multiplicarBtnActionPerformed(evt);
+            }
+        });
+
+        dividirBtn.setText("Dividir");
+        dividirBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dividirBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(68, 68, 68)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(sumarBtn)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(valorUno)
-                        .addComponent(valorDos)
-                        .addComponent(resultado, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)))
-                .addContainerGap(246, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(valorUno)
+                    .addComponent(valorDos)
+                    .addComponent(resultado)
+                    .addComponent(sumarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(restarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(multiplicarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
+                    .addComponent(dividirBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -66,7 +92,13 @@ public class ContainerSuma extends javax.swing.JFrame {
                 .addComponent(resultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
                 .addComponent(sumarBtn)
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(restarBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(multiplicarBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dividirBtn)
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         pack();
@@ -74,8 +106,23 @@ public class ContainerSuma extends javax.swing.JFrame {
 
     private void sumarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumarBtnActionPerformed
         Operaciones oper = new Operaciones();
-        resultado.setText( Integer.toString( oper.sumar( Integer.parseInt( valorDos.getText() ) , Integer.parseInt( valorUno.getText() )) ) );
+        resultado.setText( Integer.toString( oper.sumar( Integer.parseInt( valorUno.getText() ) , Integer.parseInt( valorDos.getText() )) ) );
     }//GEN-LAST:event_sumarBtnActionPerformed
+
+    private void restarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restarBtnActionPerformed
+        Operaciones oper = new Operaciones();
+        resultado.setText( Integer.toString( oper.restar( Integer.parseInt( valorUno.getText() ) , Integer.parseInt( valorDos.getText() )) ) );
+    }//GEN-LAST:event_restarBtnActionPerformed
+
+    private void multiplicarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicarBtnActionPerformed
+        Operaciones oper = new Operaciones();
+        resultado.setText( Integer.toString( oper.multiplicar( Integer.parseInt( valorUno.getText() ) , Integer.parseInt( valorDos.getText() )) ) );
+    }//GEN-LAST:event_multiplicarBtnActionPerformed
+
+    private void dividirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dividirBtnActionPerformed
+        Operaciones oper = new Operaciones();
+        resultado.setText( Integer.toString( oper.dividir( Integer.parseInt( valorUno.getText() ) , Integer.parseInt( valorDos.getText() )) ) );
+    }//GEN-LAST:event_dividirBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -113,6 +160,9 @@ public class ContainerSuma extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton dividirBtn;
+    private javax.swing.JButton multiplicarBtn;
+    private javax.swing.JButton restarBtn;
     private javax.swing.JTextField resultado;
     private javax.swing.JButton sumarBtn;
     private javax.swing.JTextField valorDos;

@@ -52,5 +52,53 @@ public class OperacionesTest {
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
+
+    /**
+     * Test of restar method, of class Operaciones.
+     */
+    @Test
+    public void testRestar() {
+        System.out.println("restar");
+        int valUno = 1145;
+        int valDos = 5524;
+        Operaciones instance = new Operaciones();
+        int expResult = valUno-valDos;
+        int result = instance.restar(valUno, valDos);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of multiplicar method, of class Operaciones.
+     */
+    @Test
+    public void testMultiplicar() {
+        System.out.println("multiplicar");
+        int valUno = 552;
+        int valDos = 544;
+        Operaciones instance = new Operaciones();
+        int expResult = valUno*valDos;
+        int result = instance.multiplicar(valUno, valDos);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of dividir method, of class Operaciones.
+     */
+    @Test
+    public void testDividir() {
+        System.out.println("dividir");
+        int valUno = 8785;
+        int valDos = 445;
+        Operaciones instance = new Operaciones();
+        int expResult = valUno/valDos;
+        int result = instance.dividir(valUno, valDos);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
     
 }

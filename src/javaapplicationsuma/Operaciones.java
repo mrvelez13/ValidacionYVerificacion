@@ -15,4 +15,16 @@ public class Operaciones {
     public int sumar(int valUno, int valDos){
         return valUno + valDos;
     }
+    
+    public int restar(int valUno, int valDos){
+        return valUno - valDos;
+    }
+    
+    public int multiplicar(int valUno, int valDos){
+        return valUno * valDos;
+    }
+    
+    public int dividir(int valUno, int valDos){
+        return valUno/valDos;
+    }
 }
