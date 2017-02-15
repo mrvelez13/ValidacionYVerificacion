@@ -46,7 +46,7 @@ public class OperacionesTest {
         int valUno = 2254;
         int valDos = 4525;
         Operaciones instance = new Operaciones();
-        int expResult = valUno+valDos;
+        int expResult = 6779;
         int result = instance.sumar(valUno, valDos);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -62,7 +62,7 @@ public class OperacionesTest {
         int valUno = 1145;
         int valDos = 5524;
         Operaciones instance = new Operaciones();
-        int expResult = valUno-valDos;
+        int expResult = -4379;
         int result = instance.restar(valUno, valDos);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -78,7 +78,7 @@ public class OperacionesTest {
         int valUno = 552;
         int valDos = 544;
         Operaciones instance = new Operaciones();
-        int expResult = valUno*valDos;
+        int expResult = 300288;
         int result = instance.multiplicar(valUno, valDos);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -94,7 +94,7 @@ public class OperacionesTest {
         int valUno = 8785;
         int valDos = 445;
         Operaciones instance = new Operaciones();
-        int expResult = valUno/valDos;
+        int expResult = 19;
         int result = instance.dividir(valUno, valDos);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
